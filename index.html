@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Web Application</title>
+  </head>
+  <body>
+    <h1>Data Records</h1>
+    <form action="/add" method="post">
+      <label for="data">Enter Data:</label>
+      <input type="text" id="data" name="data">
+      <button type="submit">Add Record</button>
+    </form>
+    <h2>Records:</h2>
+    <ul>
+      {% for record in records %}
+        <li>{{ record['data'] }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
